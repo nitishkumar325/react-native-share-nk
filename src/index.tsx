@@ -42,6 +42,10 @@ const RNShare = {
     VIBER: NativeModules.RNShare.VIBER || Social.Viber,
   },
 
+    openDemo(){
+      NativeModules.RNShare.openDemo()
+    }
+
   open(options: ShareOptions): Promise<ShareOpenResult | never> {
     return new Promise((resolve, reject) => {
       requireAndAskPermissions(options)

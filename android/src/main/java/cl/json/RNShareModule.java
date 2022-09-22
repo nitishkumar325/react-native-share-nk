@@ -169,6 +169,12 @@ public class RNShareModule extends ReactContextBaseJavaModule implements Activit
     }
 
     @ReactMethod
+    public void openDemo() {
+        System.out.println("hello world");
+    }
+
+
+    @ReactMethod
     public void shareSingle(ReadableMap options, @Nullable Callback failureCallback, @Nullable Callback successCallback) {
         System.out.println("SHARE SINGLE METHOD");
         TargetChosenReceiver.registerCallbacks(successCallback, failureCallback);
